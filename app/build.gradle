@@ -1,0 +1,52 @@
+apply plugin: 'com.android.application'
+
+android {
+    signingConfigs {
+        config_release {
+            keyAlias 'android_release'
+            keyPassword 'Ti5nhY3u'
+            storeFile file('/Users/conqtc/keystores')
+            storePassword 'Ti5nhY3u'
+        }
+    }
+    compileSdkVersion 26
+    buildToolsVersion "26.0.2"
+    defaultConfig {
+        applicationId "com.cee.cvox"
+        minSdkVersion 23
+        targetSdkVersion 26
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        vectorDrawables.useSupportLibrary = true
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.config_release
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    // VectorDrawableCompat
+    // AnimatedVectorDrawableCompat
+    compile 'com.android.support:support-media-compat:26.+'
+    compile 'com.android.support:appcompat-v7:26.+'
+    compile 'com.android.support:support-v4:26.+'
+    compile 'com.android.support:palette-v7:26+'
+    compile 'com.android.support:design:26.+'
+    compile 'com.android.support:recyclerview-v7:26.+'
+    compile 'com.android.support:cardview-v7:26.+'
+    compile 'com.android.support:percent:26.+'
+    compile 'com.android.support:support-vector-drawable:26.+'
+    compile 'com.android.support:animated-vector-drawable:26.+'
+    compile 'com.android.support:transition:26.+'
+    compile 'com.android.support:support-annotations:26.+'
+    testCompile 'junit:junit:4.12'
+}

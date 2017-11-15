@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="0dp"
+    android:layout_marginLeft="@dimen/card_margin"
+    android:layout_marginRight="@dimen/card_margin"
+    android:layout_marginTop="@dimen/card_margin"
+    app:cardElevation="2dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="@dimen/card_padding">
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_marginRight="@dimen/card_padding"
+            app:srcCompat="@mipmap/ic_blog" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+                <ImageView
+                    android:id="@+id/imageView5"
+                    android:layout_width="16dp"
+                    android:layout_height="match_parent"
+                    app:srcCompat="@mipmap/ic_calendar" />
+
+                <TextView
+                    android:id="@+id/tvFeedSub"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/card_padding"
+                    android:layout_marginStart="@dimen/card_margin"
+                    android:text="October 1, 2017"
+                    android:textSize="12sp"
+                    android:textStyle="italic" />
+
+                <ImageView
+                    android:id="@+id/imageView7"
+                    android:layout_width="16dp"
+                    android:layout_height="match_parent"
+                    app:srcCompat="@mipmap/ic_comment_dark" />
+
+                <TextView
+                    android:id="@+id/tvbComments"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/card_margin"
+                    android:text="0 comments"
+                    android:textAppearance="@android:style/TextAppearance.Material.Small"
+                    android:textSize="12sp"
+                    android:textStyle="italic" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvFeedTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/card_margin"
+                android:layout_marginTop="@dimen/card_margin"
+                android:text="TextView"
+                android:textAppearance="@android:style/TextAppearance.Material.Medium"
+                android:textColor="@color/colorPrimary" />
+
+            <TextView
+                android:id="@+id/tvFeedDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="There’s a lot going on in the skies these months: the American eclipse in August, meteor showers in September… Why not celebrate these events with 10 gems from our catalog? In the Days of the Comet that is visible in the sky, William is about to kill his unfaithful girlfriend. But when the greenish comet […]"
+                android:textAppearance="@android:style/TextAppearance.Material.Small"
+                android:textColor="@android:color/black" />
+
+        </LinearLayout>
+    </LinearLayout>
+</android.support.v7.widget.CardView>

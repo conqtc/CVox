@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.cee.cvox.BookDetailActivity">
+    <FrameLayout
+        android:id="@+id/activity_book_detail_progress"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/detailToolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:background="?attr/colorPrimary"
+            android:elevation="3dp"
+            android:minHeight="?attr/actionBarSize" />
+
+
+        <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/llBookLayout"
+                android:layout_width="320dp"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/card_padding">
+
+                    <ImageView
+                        android:id="@+id/ivdCover"
+                        android:layout_width="72dp"
+                        android:layout_height="72dp"
+                        android:layout_marginRight="@dimen/card_padding"
+                        android:background="@color/colorInactive"
+                        android:padding="1dp"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tvdTitle"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/line_spacing"
+                            android:layout_marginTop="@dimen/line_spacing"
+                            android:text="Title"
+                            android:textAppearance="@android:style/TextAppearance.Material.Small"
+                            android:textColor="@color/colorPrimary"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/tvdPubdate"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Thu, 1 Oct 2017 14:23"
+                            android:textAppearance="@android:style/TextAppearance.Material.Small"
+                            android:textSize="12sp"
+                            android:textStyle="italic" />
+
+                        <!--
+                        <TextView
+                            android:id="@+id/tvdCreator"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@android:color/black" />
+                        !-->
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tvdDescription"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingBottom="@dimen/card_padding"
+                    android:paddingEnd="@dimen/card_padding"
+                    android:paddingStart="@dimen/card_padding"
+                    android:scrollbars="vertical"
+                    android:textAppearance="@android:style/TextAppearance.Material.Small"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textView5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorInactive"
+                    android:elevation="1dp"
+                    android:gravity="center_vertical"
+                    android:padding="@dimen/card_margin"
+                    android:text="@string/header_chapters"
+                    android:textAppearance="@android:style/TextAppearance.Material.Medium"
+                    android:textStyle="bold" />
+
+                <ListView
+                    android:id="@+id/lvdChapters"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:divider="@drawable/list_divider_zero_inset"
+                    android:dividerHeight="2dp" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

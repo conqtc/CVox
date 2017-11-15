@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="@dimen/card_margin"
+    tools:context="com.cee.cvox.FeedActivity">
+
+    <TextView
+        android:id="@+id/tvfFeedTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/card_margin"
+        android:text="Title"
+        android:textAppearance="@android:style/TextAppearance.Material.Headline" />
+
+    <TextView
+        android:id="@+id/tvfFeedSub"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/card_padding"
+        android:layout_marginLeft="@dimen/card_margin"
+        android:layout_marginTop="@dimen/card_margin"
+        android:text="Posted on" />
+
+
+    <WebView
+        android:id="@+id/wvFeedContent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</LinearLayout>
